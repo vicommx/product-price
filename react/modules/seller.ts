@@ -5,6 +5,15 @@ export function getDefaultSeller(sellers?: ProductTypes.Seller[]) {
     return
   }
 
+  const marketPlaceSeller = sellers.find(seller => seller?.sellerId === '1')
+
+  if (
+    marketPlaceSeller &&
+    marketPlaceSeller?.commertialOffer?.AvailableQuantity > 0
+  ) {
+    return marketPlaceSeller
+  }
+
   const defaultSeller = sellers.find(seller => seller.sellerDefault)
 
   if (!defaultSeller) {

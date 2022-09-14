@@ -84,6 +84,7 @@ function SellingPrice({
   const hasUnitMultiplier = unitMultiplier !== 1
 
   const containerClasses = withModifiers('sellingPrice', [
+    seller?.sellerId ? `Seller-${seller.sellerId}` : '',
     hasListPrice ? 'hasListPrice' : '',
     hasMeasurementUnit ? 'hasMeasurementUnit' : '',
     hasUnitMultiplier ? 'hasUnitMultiplier' : '',

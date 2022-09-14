@@ -1,5 +1,5 @@
 {
-  "vendor": "vtex",
+  "vendor": "vicomstudio",
   "name": "product-price",
   "version": "1.29.0",
   "title": "VTEX Product Price",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "vtex.native-types": "0.x",
+    "vtex.product-price": "1.x",
     "vtex.product-context": "0.x",
     "vtex.format-currency": "0.x",
     "vtex.css-handles": "1.x",
@@ -21,5 +22,15 @@
     "smartcheckout"
   ],
   "policies": [],
+  "billingOptions": {
+    "type": "free",
+    "availableCountries": [
+      "*"
+    ],
+    "termsURL": "https://compliance.vtex.com/gdpr/policies/vtex-privacy-policy",
+    "support": {
+      "url": "https://vicom.mx/contacto"
+    }
+  },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

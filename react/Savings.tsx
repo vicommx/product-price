@@ -110,6 +110,7 @@ function Savings({
   }
 
   const containerClasses = withModifiers('savings', [
+    seller?.sellerId ? `Seller-${seller.sellerId}` : '',
     alwaysShow && commercialOffer.AvailableQuantity <= 0 ? 'isUnavailable' : '',
   ])
 
